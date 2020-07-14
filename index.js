@@ -1,33 +1,53 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
+const votingAge = 18;
+if (votingAge >= 18) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-
+let speed = 50;
+if (speed <= 30) {
+    console.log("safe");
+}
+else {
+    console.log("ticket");
+}
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
+let strYear = "1999";
+let intYear = parseInt(strYear);
+console.log(intYear);
 
 
 
+//Task d: Write a function to multiply a*b
 
-//Task d: Write a function to multiply a*b 
-
-
+function multiply(a,b) {
+    return a * b;
+};
+console.log(multiply(7,40));
 
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
-//write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+//write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years
 
-
+function ageInDogYears(myAge, dogYears) {
+     return myAge * dogYears
+};
+console.log(ageInDogYears(38,7));
 
 
 
@@ -48,8 +68,31 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
 
+function feedRequired(ageYears, weightLbs) {
+    if (weightLbs <= 5 && ageYears >= 1) {
+        return "Your dog requires "  +  (weightLbs * .05).toFixed(2) + " lbs of food daily."
+    }
+    else if (weightLbs > 5 && weightLbs <= 10 && ageYears >= 1) {
+        return "Your dog requires "  +  (weightLbs * .04).toFixed(2) + " lbs of food daily."
+    }
+    else if (weightLbs > 10 && weightLbs <= 15 && ageYears >= 1) {
+        return "Your dog requires "  +  (weightLbs * .03).toFixed(2) + " lbs of food daily."
+    }
+    else if (weightLbs > 15 && ageYears >= 1) {
+        return "Your dog requires "  +  (weightLbs * .02).toFixed(2) + " lbs of food daily."
+    }
+    else if (ageYears < 1 && ageYears >= .58) {
+        return "Your dog requires "  +  (weightLbs * .10).toFixed(2) + " lbs of food daily."
+    }
+    else if (ageYears < .58 && ageYears >= .33) {
+        return "Your dog requires "  +  (weightLbs * .05).toFixed(2) + " lbs of food daily."
+    }
+    else if (ageYears < .33 && ageYears >= .17) {
+        return "Your dog requires "  + (weightLbs * .04).toFixed(2) + " lbs of food daily."
+    }
+}
+console.log(feedRequired(1,15));
 
 
 
@@ -60,8 +103,7 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
-  
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
