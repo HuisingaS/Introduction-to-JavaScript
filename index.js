@@ -97,6 +97,33 @@ console.log(feedRequired(1,15));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+let userChoice = prompt('rock, paper, or scissors?');
+let comChoice = Math.random();
+
+    if(comChoice <= 0.33){
+        comChoice = 'rock';
+    }else if(comChoice <= 0.66){
+        compChoice = 'paper';
+    }else if(comChoice < 1){
+        comChoice = 'scissors';
+    };
+
+function gameResult(userChose, comChose){
+    if(userChose === comChose){
+        return 'Tied Game...';
+    }else if(userChose === 'rock' && comChose === 'scissors'){
+        return 'You win!';
+    }else if(userChose === 'paper' && comChose === 'rock'){
+        return 'You win!';
+    }else if(userChose === 'scissors' && comChose === 'paper'){
+        return 'You win!';
+    }else{
+        return 'Loser!';
+    }
+};
+console.log(gameResult(userChoice, comChoice));
+
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
